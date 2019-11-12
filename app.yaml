@@ -16,9 +16,4 @@ handlers:
 # required when static routes are defined, but can be omitted (along with
 # the entire handlers section) when there are no static files defined.
 - url: /.*
-  script: auto
-
-resources:
-  cpu: 1
-  memory_gb: 5
-  disk_size_gb: 15
+  script: myapp.wsgi
