@@ -80,7 +80,8 @@ DATABASES = {
         'NAME': 'myapp',
         'USER': 'root',
         'PASSWORD': 'Theworld#0', # change later
-        'HOST': '34.68.24.184'
+        'HOST': 'localhost',
+        'PORT': 3306
     }
 }
 
