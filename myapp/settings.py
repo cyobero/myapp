@@ -26,7 +26,7 @@ SECRET_KEY = '-016x+a=$1#8f$w)ex0g!626c!)@!=0x5##tv9-_0=gu!+=nge'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['turing-poet-258403.appspot.com', 'localhost']
+ALLOWED_HOSTS = ['turing-poet-258403.appspot.com', 'localhost', 'http://127.0.0.1:8000/']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'posts',
 ]
 
 MIDDLEWARE = [
