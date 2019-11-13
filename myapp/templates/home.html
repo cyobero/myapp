@@ -3,9 +3,9 @@
 
 {% block title %}
 <title>Czar's Portfolio</title>
-{% endbock %}
+{% endblock %}
 
-{% bblock navbar-active-page %}
+{% block navbar-active-page %}
 <li class="nav-item active">
     <a class="nav-link" href="#">Home
         <span class="sr-only">(current)</span>
@@ -22,7 +22,7 @@
 </li>
 {% endblock %}
 
-{% block conteent %}
+{% block content %}
 <!-- Blog Entries Column -->
 <div class="col-md-8">
 
@@ -30,7 +30,7 @@
         <small>Secondary Text</small>
     </h1>
 
-    <!-- posts paginationn -->
+    <!-- posts pagination -->
     {% for post in posts %}
     <div class="card mb-4">
         <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">

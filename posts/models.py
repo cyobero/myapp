@@ -11,7 +11,7 @@ class Posts(models.Model):
     body = models.TextField()
     author = models.OneToOneField(User)
     timestamp = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField()
+    image = models.ImageField(null=True, upload_to='images')
 
     def __unicode__(self):
         return "%s-%s" % (self.title, str(self.id))
