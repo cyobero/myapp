@@ -1,8 +1,10 @@
 {% load staticfiles %}
 <html>
 <head>
-    <title>My GCP App</title>
 
+    {% block title %}
+    <title>My GCP App</title>
+    {% endblock %}
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -20,20 +22,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+                {% block navbar-active-page %}
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="#">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">Resumé</a>
                 </li>
+                {% endblock %}
             </ul>
         </div>
     </div>
@@ -44,6 +48,7 @@
 
     <div class="row">
 
+        {% block content %}
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
@@ -98,6 +103,7 @@
                     <a href="#">Start Bootstrap</a>
                 </div>
             </div>
+            {% endblock %}
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center mb-4">
@@ -110,6 +116,7 @@
             </ul>
 
         </div>
+
     </div>
     <!-- /.row -->
 
