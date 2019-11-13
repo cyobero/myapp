@@ -24,7 +24,7 @@ ROOT_PATH = os.path.dirname(__file__)
 SECRET_KEY = '-016x+a=$1#8f$w)ex0g!626c!)@!=0x5##tv9-_0=gu!+=nge'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['turing-poet-258403.appspot.com', 'localhost', '127.0.0.1']
 
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-if DEBUG:
+if os.getenv('GAE_APPLICATION', None):
     # Running on production App Engine, so connect to Google Cloud SQL using
     # the unix socket at /cloudsql/<your-cloudsql-connection string>
     DATABASES = {
