@@ -1,5 +1,7 @@
-{% block page-title %}
-<title>{{ title }}</title>
+{% extends 'home.html' %}
+{% block title %}
+<title>{{ post.title }}</title>
+{% endblock %}
 
 {% block navbar-active-page %}
 <li class="nav-item">
@@ -22,7 +24,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-lg-8 col-sm-8">
-            <h1>{{ title }}</h1>
+            <h1>{{ post.title }}</h1>
         </div>
     </div>
 </div>

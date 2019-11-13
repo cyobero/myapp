@@ -33,19 +33,18 @@
     <!-- posts pagination -->
     {% for post in posts %}
     <div class="card mb-4">
-        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+        <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
         <div class="card-body">
-            <h2 class="card-title">{{ title }}</h2>
-            <p class="card-text">{{ body }}</p>
-            <a href="/post/{{ post_id }}" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.body }}</p>
+            <a href="/post/{{ post.id }}" class="btn btn-primary">Read More &rarr;</a>
         </div>
         <div class="card-footer text-muted">
-            Posted on {{ timestamp }} by
-            <a href="#">{{ author }}</a>
+            Posted on {{ post.timestamp }} by
+            <a href="#">{{ post.author }}</a>
         </div>
     </div>
     {% endfor %}
-
 
     <!-- Pagination -->
     <ul class="pagination justify-content-center mb-4">

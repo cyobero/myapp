@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from .views import *
-from posts.views import post
+from post.views import post
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
     url(r'^about', about, name='about'),
+    url(r'^post/(\d+)/$', post, name='post'),
 ]
 
 if settings.DEBUG:

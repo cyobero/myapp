@@ -1,14 +1,15 @@
 from django.shortcuts import render
-from posts.models import Posts
+from post.models import Post
+from django.shortcuts import get_list_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def home(request):
-    # Fetcch posts andn only display first five posts.
+    # Fetch posts and only display first five posts.
     # We'll use pagination to scroll through posts.
-    post_list = Posts.objects.all()
+    post_list = get_list_or_404(Post)
     paginator = Paginator(post_list, 5)  # paginator object that contains latest five posts
-    page = request.GET.get('page')
+    page = request.GET.get('page')  # what this do?
     try:
         posts = paginator.page(page)
     except PageNotAnInteger:
