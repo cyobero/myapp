@@ -24,7 +24,7 @@ ROOT_PATH = os.path.dirname(__file__)
 SECRET_KEY = '-016x+a=$1#8f$w)ex0g!626c!)@!=0x5##tv9-_0=gu!+=nge'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['turing-poet-258403.appspot.com', 'localhost', '127.0.0.1']
 
@@ -100,7 +100,6 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '127.0.0.1',
-            'PORT': '3306',
             'NAME': 'myapp',
             'USER': 'root',
             'PASSWORD': 'Theworld#0',

@@ -19,6 +19,7 @@ from .views import *
 from post.views import post
 from django.conf.urls.static import static
 from django.conf import settings
+from resume.views import resume
 
 
 urlpatterns = [
@@ -26,6 +27,7 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^about', about, name='about'),
     url(r'^post/(\d+)/$', post, name='post'),
+    url(r'^resume/$', resume, name='resume'),
 ]
 
 if settings.DEBUG:
