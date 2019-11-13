@@ -1,0 +1,29 @@
+{% block page-title %}
+<title>{{ title }}</title>
+
+{% block navbar-active-page %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'home' %}">Home
+        <span class="sr-only">(current)</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'about' %}">About</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#">Projects</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#">Resumé</a>
+</li>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-lg-8 col-sm-8">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
