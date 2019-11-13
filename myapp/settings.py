@@ -24,9 +24,9 @@ ROOT_PATH = os.path.dirname(__file__)
 SECRET_KEY = '-016x+a=$1#8f$w)ex0g!626c!)@!=0x5##tv9-_0=gu!+=nge'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['turing-poet-258403.appspot.com', 'localhost', 'http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ['turing-poet-258403.appspot.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
