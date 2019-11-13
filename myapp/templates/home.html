@@ -41,7 +41,7 @@
         </div>
         <div class="card-footer text-muted">
             Posted on {{ post.timestamp }} by
-            <a href="#">{{ post.author }}</a>
+            <a href="#">{{ post.author.first_name }} {{ post.author.last_name }}</a>
         </div>
     </div>
     {% endfor %}
