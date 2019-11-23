@@ -18,4 +18,3 @@ class Posts(models.Model):
 
     class Meta:
         ordering = ['-timestamp', ]
-
